@@ -78,7 +78,8 @@ exports.postFacilityRegister = async function (req, res) {
         lo,
         img.name
       );
-    return res.send(registerwithImgResponse);}
+    return res.send(registerwithImgResponse);
+  }
   // } else {
   //   const { location, title, type, installAgency, la, lo } = req.body;
   //   const registerResponse = await facilityService.registerFacility(

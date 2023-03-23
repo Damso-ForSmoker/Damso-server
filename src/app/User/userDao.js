@@ -99,7 +99,11 @@ async function selectBookmark(connection, userid) {
   return checkBookmark;
 }
 
-
+async function retrieveRegistered(connection, userid){
+  const retrieveRegisteredquery = `
+    select COUNT(case when user_id=? then 1 end) from facility;
+  `;
+}
 
 
 
@@ -110,4 +114,5 @@ module.exports = {
   selectUserInfo,
   updateUserStatus,
   retrieveProfile,
+  retrieveRegistered,
 };

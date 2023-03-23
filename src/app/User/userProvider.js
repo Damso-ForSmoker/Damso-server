@@ -25,3 +25,7 @@ exports.retrieveProfile = async function(userid){
   connection.release();
   return result;
 }
+exports.getRegistered = async function(userid){
+  const connection = await pool.getConnection(async (conn)=> conn);
+  const result = await userDao.retrieveRegistered(connection, userid);
+}

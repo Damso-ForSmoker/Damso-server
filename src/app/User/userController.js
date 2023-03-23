@@ -122,7 +122,7 @@ exports.postUserResign = async function (req, res) {
 };
 
 /**
- * API No. 5-4
+ * API No. 5-5
  * API Name : 내 제보 현황 조회 API
  * [GET] /main/facility/register/:userid
  */
@@ -131,4 +131,6 @@ exports.getFacilityRegister = async function (req, res) {
 
   const UserRegisterResponse = await userProvider.getRegistered(userid);
   return res.send(response(baseResponse.SUCCESS, UserRegisterResponse));
+
+  
 };
